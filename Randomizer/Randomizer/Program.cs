@@ -7,14 +7,6 @@ namespace Randomizer
         static void Main(string[] args)
         {
 
-            /* Гра "Вгадай число"
-            Програма випадковим чином генерує число від 1 до 1000.
-            Користувач має 7 спроб, щоб відгадати це число.
-            Після кожної невдалої спроби програма повинна повідомляти, чи є введене число меншим або більшим за задумане.
-            Якщо користувач вгадує - вивести повідомлення про перемогу.
-            Якщо не вгадує за 7 спроб - повідомити, що гру програно. */
-
-
             int userNumber1;
          
             Random random1 = new Random((int)DateTime.Now.Ticks);
@@ -25,8 +17,6 @@ namespace Randomizer
 
             for (int counter = 7; counter >= 0 ; counter--)
             {
-
-
                 if (counter == 0)
                 {
                     Console.WriteLine("You are lose. It was " + random2);
@@ -35,7 +25,6 @@ namespace Randomizer
                 else 
                 {
                     userNumber1 = int.Parse(Console.ReadLine());
-
 
                     if (random2 == userNumber1)
                     {
@@ -52,15 +41,11 @@ namespace Randomizer
                         {
                         Console.WriteLine("Too low!\n");
                         }
-
                     }
-
                     Console.WriteLine("\nYou have " + (counter - 1) + " attempt");
-
                 }
-
             }
-           
         }
     }
 }
+
